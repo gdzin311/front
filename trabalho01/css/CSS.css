@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rationale&family=Space+Grotesk:wght@300..700&display=swap');
 
 body{
-    background-color: #3b2f22;
+    background-color: #2c2e32;
     font-family: "Rationale", sans-serif;
 }
 
-figcaption, ol, ul{color: aliceblue;}
+figcaption, ol, ul, a{color: aliceblue;}
 
 h1, h2{
     color: rgb(114, 129, 144);
@@ -20,11 +20,10 @@ main p, header p{
     text-indent: 8px;
 }
 
-a{color: rgb(99, 99, 121);}
-
-th,td{border: 2px solid rgb(143, 121, 96)}
+th,td{border: 3px solid rgb(114, 129, 144)}
 
 table{
+    border-collapse: collapse;
     color: aliceblue;
     width: 100%;
 }
@@ -35,4 +34,4 @@ footer{
     background-color: rgb(114, 129, 144);
 }
 
-.destaque{color:rgb(230, 101, 101)}
+.destaque, #av{color:rgb(230, 101, 101)}
