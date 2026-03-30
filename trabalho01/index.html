@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro trabalho</title>
+    <link rel="stylesheet" href="css/CSS.css">
+</head>
+<body>
+    <header>
+        <h1 id="c0">Como funciona o sistema Linux e sua importancia para o mundo moderno</h1>
+        
+        <p> 
+            O Linux é um sistema operacional, assim como o Windows ou o macOS, mas com uma grande diferença:
+            ele é gratuito e de código aberto. Isso significa que qualquer pessoa pode ver como ele foi feito e sugerir melhorias.
+            O Linux hoje está em quase todos os lugares, desde os servidores que mantêm a internet funcionando até os celulares Android.
+            Ele é conhecido por ser muito seguro, leve e por dar total liberdade para o usuário personalizar o computador do jeito que quiser.
+            Neste artigo exploraremos desde a criação do sistema por um estudante entediado até a sua estrutura de diretorios.
+        </p>
+    </header>
+    <nav>
+        <ol>
+            <li><a href="#c0">Página Inicial</a></li>
+            <li><a href="#c1">A historia de Linux (Torvalds)</a></li>
+            <li><a href="#c2" id="av">As Distribuição Linux</a></li>
+            <li><a href="#c3">O Kernel</a></li>
+            <li><a href="#c4">As Partições</a></li>
+        </ol>
+    </nav>
+    <main>
+        <h2 id="c1">A historia de Linux (Torvalds)</h2>
+        
+        <p>
+            A história do Linux começou em 1991, quando o estudante finlandês Linus Torvalds decidiu criar um núcleo (kernel) de sistema operacional gratuito e independente, inspirado no Unix e no Minix.
+            Diferente de outros projetos da época, Torvalds disponibilizou o código-fonte na internet e convidou outros programadores a colaborar.
+            Essa decisão foi o estopim para um crescimento sem precedentes: ao ser combinado com as ferramentas de software livre do projeto GNU (liderado por Richard Stallman), nasceu o sistema operacional GNU/Linux.
+            Ao longo das décadas, o Linux deixou de ser um projeto de entusiasta para se tornar a espinha dorsal da computação mundial, alimentando desde servidores de internet e supercomputadores até smartphones (Android) e dispositivos espaciais.
+        </p>
+
+        <br><br>
+
+        <center><picture>
+            <img src="img/linus_torvalds.jpg" alt="linux torvalds"  >
+            <figcaption>
+                Foto de Linus Torvalds, o criador do sistema Linux
+            </figcaption>
+        </picture></center>
+
+        <h2 id="c2">As Distribuições Linux</h2>
+
+        <p>
+            Para que essae ideal de Torvalds ganhasse vida na prática, surgiram as distribuições, que são pacotes completos que combinam o kernel com interfaces gráficas e softwares utilitários para diferentes perfis de usuário.
+            O Slackware e o Debian, lançados no início dos anos 90, pavimentaram o caminho ao organizar o sistema de forma que qualquer pessoa pudesse instalá-lo, dando origem a linhagens famosas: o Debian gerou o Ubuntu, que popularizou o Linux no desktop com foco em facilidade, enquanto o Red Hat focou no mercado corporativo e de servidores.
+            Hoje, essa fragmentação saudável permite que existam sistemas específicos para cada nicho, desde o Linux Mint para ex-usuários de Windows e o Fedora para desenvolvedores, até o Kali Linux, voltado exclusivamente para segurança ofensiva e testes de invasão.
+        </p>
+
+        <table>
+            <caption>As Principais Distribuições Linux</caption>
+            <thead>
+                <tr>
+                    <th>Distribuição</th>
+                    <th>Base(Ancestral)</th>
+                    <th>Interface Padrão</th>
+                    <th>Público-Alvo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ubuntu</td>
+                    <td>Debian</td>
+                    <td>GNOME</td>
+                    <td>Iniciantes e Servidores</td>
+                </tr>
+
+                <tr>
+                    <td>Linux Mint</td>
+                    <td>Debian</td>
+                    <td>Cinnamon</td>
+                    <td>Usuários de Windows</td>
+                </tr>
+
+                <tr>
+                    <td>Fedora</td>
+                    <td>Red Hat</td>
+                    <td>GNOME</td>
+                    <td>Desenvolvedores</td>
+                </tr>
+
+                <tr>
+                    <td>Manjaro</td>
+                    <td>Arch Linux</td>
+                    <td>XFCE/KDE/GNOME</td>
+                    <td>Usuários Intermediários</td>
+                </tr>
+
+                <tr>
+                    <td>Debian</td>
+                    <td>Independente</td>
+                    <td>GNOME</td>
+                    <td>Administradores e Puristas</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="destaque">Cada distro tem suas especialidades e características especificas</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h2 id="c3">O Kernel</h2>
+
+        <p>
+            Todas as distros usam o Kernel Linux, ele é o coração do sistema operacional, atuando como o "grande tradutor" e intermediário entre o hardware do computador e os softwares que você utiliza.
+            Imagine-o como o gerente de um restaurante: ele não cozinha (não é o aplicativo) e não é o fogão (não é o hardware), mas é ele quem recebe os pedidos, decide qual cozinheiro vai usar qual boca do fogão e garante que ninguém tente usar a mesma panela ao mesmo tempo, evitando o caos.
+        </p>
+
+        <br>
+
+        <center><picture >
+            <img src="img/gemini.png" alt="Diagrama de funcionamento do Kernel" width="666" height="434">
+        </picture></center>
+
+        <br>
+
+        <p>Tecnicamente, o kernel desempenha quatro funções críticas para que o computador não entre em colapso:</p>
+
+        <ul>
+            <li>Gerenciamento de Processos: Ele decide qual programa recebe a atenção do processador (CPU) e por quanto tempo, permitindo que você ouça música enquanto digita um texto.</li>
+            <li>Gerenciamento de Memória (RAM): O kernel aloca fatias específicas de memória para cada tarefa. Se um programa tenta invadir o espaço de outro, o kernel o impede para evitar travamentos.</li>
+            <li>Drivers de Dispositivo: Ele contém o código necessário para "conversar" com a placa de vídeo, o teclado, o Wi-Fi e o disco rígido.</li>
+            <li>Chamadas de Sistema (SystemCalls): É a ponte de comunicação; quando um navegador quer salvar um arquivo, ele "pede permissão" ao kernel, que executa a escrita física no disco.</li>
+        </ul>
+
+        <p>No caso do Linux, ele é um Kernel Monolítico, o que significa que todas essas funções rodam em um único espaço de memória privilegiado para garantir máxima velocidade, embora ele seja modular o suficiente para carregar e descarregar drivers conforme a necessidade, sem que você precise reiniciar a máquina.</p>
+
+        <h2 id="c4">As Partições</h2>
+
+        <p>
+            O conceito de partições no Linux é um pouco diferente do Windows (onde você vê apenas C: ou D:). O Linux utiliza uma estrutura de árvore única, onde cada partição é "montada" em uma pasta específica.
+            As partições funcionam como divisões lógicas no seu disco rígido para organizar dados e proteger o sistema. Aqui estão as principais que você encontrará ao instalar o sistema:
+        </p>
+
+        <ol>
+            <li> A Partição Raiz (/): É o "tronco" da árvore. Tudo no Linux nasce aqui. Se você tiver apenas uma partição, ela será a raiz. Ela contém os arquivos do sistema, configurações e programas. Se a partição / encher ou quebrar, o sistema para de funcionar.</li>
+            <li> A Partição /home: Esta é a pasta dos usuários. É onde ficam seus documentos, fotos, downloads e configurações de aplicativos.</li>
+            <li>A Partição de Troca (Swap): Diferente das outras, a Swap não é usada para guardar arquivos, mas sim como uma "extensão" da sua memória RAM. Quando a RAM fica cheia, o kernel move os dados menos usados para essa partição no disco.</li>
+            <li>A Partição /boot ou EFI: É uma partição pequena (geralmente entre 100MB e 500MB) que guarda os arquivos necessários para iniciar o computador, como o GRUB (o menu de inicialização) e o próprio Kernel. Em sistemas modernos (UEFI), ela é obrigatória para que a placa-mãe saiba onde encontrar o sistema operacional.</li>
+        </ol>
+
+        <h2>Aqui há um vídeo para melhor compreender o tema:</h2>
+
+        <center><iframe width="560" height="315" src="https://www.youtube.com/embed/V2j0WdhgvV8?si=ZWjFZG-MaebtijWp" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+
+        <br>
+
+        <h2>Gostou do conteudo? Considere se inscrever no nosso site:</h2>
+
+        <form>
+            <fieldset style="color: aliceblue;">
+            <fieldset class="destaque">
+                <legend>Campos obrigatorios</legend>
+
+                <label for="i1">Nome:</label>
+                <input type="text" name="nome" id="i1" required>
+
+                <br>
+
+                <label for="i2">E-Mail:</label>
+                <input type="email" name="email" id="i2" required>
+
+                <br>
+
+                <label for="i3">Senha:</label>
+                <input type="password" name="senha" id="i3" required>
+
+            </fieldset>
+            <fieldset>
+                <legend>Campos opcionais</legend>
+
+                <label for="i4">Data de Nascimento:</label>
+                <input type="date" name="data_de_nascimento" id="i4">
+
+                <br>
+
+                <label for="i5">Número de telefone:</label>
+                <input type="tel" name="telefone" id="i5">
+
+                <br>
+
+                <label for="i6">Sua cor favorita</label>
+                <input type="color" name="cor_favorita" id="i6">
+
+            </fieldset>
+
+            <br>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Apagar Tudo</button>
+            </fieldset>
+        </form>
+        
+    </main>
+    <footer>
+        <p>
+            Artur Guadalupe Duarte Pereira <br>
+            2025311407 <br>
+            Turma: 2I <br>
+            IFRS Campus Rio Grande <br>
+            <a href="https://ifrs.edu.br/riogrande/"><img src="img/Logo-Campus-Rio-Grande_vertical-1.png" alt="Logo do IFRS Campus Rio Grande" width="49" height="77"></a>
+        </p>
+    </footer>
+</body>
+</html>
